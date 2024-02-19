@@ -1,0 +1,24 @@
+.light{
+    background-color: lightgray;
+color: black;
+}
+.dark{
+    background-color: black;
+    color: white;
+}
+.new{
+    border: 2px solid yellow;
+box-shadow: 2px 2px 2px grey;
+}
+.light-new{
+    background-color: lightgray;
+    color: black;
+    border: 2px solid yellow;
+    box-shadow: 2px 2px 2px grey;
+}
+.dark-new{
+    background-color: black;
+    color: white;
+    border: 2px solid yellow;
+box-shadow: 2px 2px 2px grey;
+}

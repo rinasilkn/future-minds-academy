@@ -1,0 +1,15 @@
+nav a{
+    margin-top: 20px;
+    display: block;
+    padding: 40px;
+    border: 1px solid red;
+}
+nav{
+    margin-bottom: 20px;
+}
+nav{
+    width: 400px;  
+     height: 100vn;
+     padding-top: 100px;
+     background-color: azure;
+}

@@ -1,0 +1,180 @@
+body {
+    background-image: url(images/images\ \(1\).jpg);
+    background-size: cover;
+}
+
+.ula {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+.loni {
+    display: inline;
+    margin: 0 20px;
+}
+
+a {
+    color: white;
+}
+
+ul {
+    padding-left: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+.titull {
+    list-style: none;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.navi {
+    margin: 0px auto;
+    text-align: center;
+}
+
+
+img {
+    border-radius: 50%;
+}
+
+
+.klasa {
+    text-align: center;
+    background-color: yellow;
+    margin: 100px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.klasor {
+    list-style: none;
+    text-align: center;
+    background-color: palevioletred;
+    margin: 100px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.fillore {
+    background-color: rgb(212, 203, 203);
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    margin-left: 0px;
+}
+
+.shkolla {
+    padding-left: 0px;
+}
+
+.tabela {
+    background-color: rgb(47, 233, 47);
+    border-radius: 15px;
+    padding: 10px;
+    margin: 100px;
+    text-align: center;
+}
+
+.tablla {
+    width: 700px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th {
+    background-color: rgb(20, 194, 20);
+}
+
+.projekt {
+    background-color: pink;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 100px;
+
+}
+
+.ls {
+    list-style-type: decimal;
+}
+
+span {
+    background-color: orange;
+    border-radius: 1px;
+    padding: 1px;
+    margin-left: 2px;
+    color: white;
+
+}
+
+footer {
+    background-color: rgb(95, 92, 92);
+    margin: 100px;
+    padding: 10px;
+
+}
+
+.school {
+    padding-left: 0px;
+
+}
+
+.alignn {
+    text-align: center;
+}
+
+.rendi {
+    text-align: center;
+}
+
+.now {
+    padding-left: 0px;
+}
+
+* {
+    cursor: url(images/favicon\ \(1\).ico), auto;
+}
+
+.titull:hover {
+    border: solid 2px;
+    border-color: black;
+    background-color: rgb(20, 20, 179);
+}
+
+.klasa:hover {
+    background-color: rgb(255, 255, 63);
+    border: solid 2px;
+}
+
+.tabela:hover {
+    background-color: rgb(5, 206, 5);
+    border: solid 2px;
+}
+
+.projekt:hover {
+    background-color: rgb(247, 69, 128);
+    border: solid 2px;
+}
+
+.fillore:hover {
+    background-color: rgb(190, 164, 164);
+    border: solid 2px;
+}
+
+.klasor:hover {
+    background-color: rgb(250, 54, 119);
+    border: solid 2px;
+}
+
+footer:hover {
+    background-color: rgb(46, 45, 45);
+    border: solid 2px;
+}

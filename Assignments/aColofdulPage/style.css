@@ -1,0 +1,34 @@
+body{
+    background-color: chartreuse;
+}
+.head{
+    background-color: aqua;
+}
+.titull{
+    background-color: beige;
+    color: blue;
+}
+.s1{
+    background-color: blueviolet;
+}
+.p1{
+    color: ghostwhite;
+}
+.h2{
+    color: blue;
+}
+.s2{
+    background-color: bisque;
+}
+.p2{
+    color: rgb(16, 97, 70);
+}
+.s3{
+    background-color: antiquewhite;
+}
+.p3{
+    color: blue;
+}
+.h3{
+    color: chocolate;
+}

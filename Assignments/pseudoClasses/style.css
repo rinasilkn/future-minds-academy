@@ -1,6 +1,13 @@
-li:nth-child(even){
+tr:nth-child(even){
     background-color: green;
 }
-li:nth-child(odd){
+tr:nth-child(odd){
     background-color: greenyellow;
+}
+table{
+border-collapse: collapse;
+}
+   
+tr{
+    border: 4px solid white;
 }

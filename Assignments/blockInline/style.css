@@ -1,0 +1,15 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+section{
+    margin: 100px;
+}
+h1{
+    display: inline;
+    font-size: 2rem;
+}
+p{
+    display: inline;
+}

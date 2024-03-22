@@ -6,17 +6,26 @@ body {
     height: 100vh;
     width: 100vw;
 }
+
 .head {
     display: flex;
     justify-content: space-around;
 }
 .one {
     border-right: 1px solid black;
-    padding: 16px;
-    font-size: 30px;
+    padding: 10px;
+    font-size: 40px;
 }
-.fz {
+.bold{
+ font-weight: bold;
+ text-align: center;
+ font-size: 40px;
+}
+.fz{
     font-size: 17px;
+}
+.cntr{
+    text-align: center;
 }
 .text {
     display: flex;
@@ -46,7 +55,7 @@ img {
     font: bold;
     position: absolute;
     left: 5px;
-    top: 95px;
+    top: 115px;
     text-decoration: none;
     font-size: 10px;
 }

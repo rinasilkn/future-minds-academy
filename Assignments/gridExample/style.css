@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 40px 1fr 40px;
+}
+.main{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+header{
+    background-color: aqua;
+}
+aside{
+    background-color: blueviolet;
+}
+main{
+    background-color: blue;
+}
+
+footer{
+    background-color: chartreuse;
+}

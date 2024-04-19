@@ -4,21 +4,17 @@
 }
 body {
     height: 100vh;
-    display: grid;
     grid-template-columns: auto 1fr;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     overflow-x: hidden;
-    overflow: hidden;
 }
 .layout {
     background-color: rgb(241, 237, 237);
-    display: grid;
     grid-template-rows: auto 1fr auto;
     padding: 20px 40px;
     overflow-y: scroll;
 }
 main {
-    display: grid;
     gap: 3rem;
 }
 .pointer:hover {
@@ -32,8 +28,19 @@ main {
 .backgroundRed {
     background-color: red;
 }
+.d-flex{
+    display: flex;
+}
+.d-grid{
+    display: grid;
+}
+.color-white{
+    color: white;
+}
+.bgColor-white{
+    background-color: white;
+}
 aside {
-    background-color: gray;
     padding: 30px;
     background-image: url(images/images-20240406T204644Z-001/images/sidebar-1.jpg);
     background-color: rgba(0, 0, 0, 0.815);
@@ -41,9 +48,7 @@ aside {
     overflow-y: scroll;
 }
 .title {
-    display: flex;
     gap: 2rem;
-    color: white;
     font-size: 1.5rem;
     margin-left: 10px;
 }
@@ -53,14 +58,11 @@ aside {
 .specificOption {
     border-radius: 3px;
     padding: 8px 10px;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 4rem;
-    color: white;
 }
 .leftside {
-    display: flex;
     justify-content: space-between;
     gap: 1rem;
 }
@@ -69,24 +71,20 @@ aside {
 }
 /*Header CSS*/
 .desktopHeader {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
 }
 .dashboard {
-    display: flex;
     align-items: center;
     gap: 1rem;
 }
 .iconBackground {
-    background-color: white;
     padding: 5px;
     border-radius: 50%;
     box-shadow: 3px 3px 3px rgb(216, 208, 208);
 }
 .moreOptions {
-    display: flex;
     gap: 1.5rem;
     align-items: center;
 }
@@ -104,11 +102,9 @@ input:focus {
     box-shadow: 0px 0px 18px 0px rgb(136, 131, 131);
 }
 .five {
-    display: flex;
     justify-content: center;
     align-items: center;
     background-color: red;
-    color: white;
     border-radius: 50%;
     width: 10px;
     height: 10px;
@@ -123,7 +119,6 @@ input:focus {
 }
 .popUp {
     display: none;
-    background-color: white;
     border-radius: 3px;
     padding: 5px;
     position: absolute;
@@ -150,15 +145,12 @@ input:focus {
     margin-top: 30px;
 }
 .satelliteImage {
-    background-color: white;
     border-radius: 5px;
     padding: 30px;
     box-shadow: 5px 5px 5px rgb(199, 194, 194);
-    display: grid;
     grid-template-rows: auto 1fr;
 }
 .divide {
-    display: grid;
     grid-template-columns: auto 1fr;
     gap: 2rem;
     align-items: center;
@@ -167,17 +159,14 @@ input:focus {
     width: 1rem;
 }
 .state {
-    display: flex;
     gap: 1rem;
 }
 .specificStates {
-    display: flex;
     justify-content: space-between;
     margin: 16px 0px;
     gap: 4rem;
 }
 .numbers {
-    display: flex;
     gap: 1rem;
 }
 iframe {
@@ -194,12 +183,10 @@ iframe {
     transform: translateY(-17px);
 }
 .section2 {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
 .cart {
-    background-color: white;
     border-radius: 5px;
     padding: 15px;
     box-shadow: 5px 5px 5px rgb(199, 194, 194);
@@ -207,7 +194,6 @@ iframe {
     grid-template-rows: 1fr auto;
 }
 .above {
-    display: flex;
     justify-content: space-between;
 }
 .iconStyle1 {
@@ -227,7 +213,6 @@ iframe {
     transform: translateY(-35px);
 }
 .cardText {
-    display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
@@ -241,7 +226,6 @@ iframe {
     width: 12px;
 }
 .tip {
-    display: flex;
     align-items: center;
     gap: .5rem;
     color: var(--greyColor);
@@ -254,19 +238,10 @@ iframe {
 .tipText {
     font-size: .8rem;
 }
-.section3 {
-    display: grid;
-    grid-template-rows: auto 1fr;
-}
-.differentCards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
 .firstImage {
     width: 50px;
 }
 .section3 {
-    display: grid;
     grid-template-rows: auto 1fr;
     gap: 3rem;
 }
@@ -274,14 +249,12 @@ iframe {
     font-size: 2rem;
 }
 .cards {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
 }
 .card {
     position: relative;
     padding: 10px;
-    background-color: white;
     box-shadow: 5px 5px 5px rgb(199, 194, 194);
     border-radius: 5px;
 }
@@ -291,7 +264,6 @@ iframe {
 }
 .first {
     position: relative;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -310,14 +282,7 @@ iframe {
 .splittingLine {
     margin: 20px 0px;
 }
-.end2 {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    bottom: -47px;
-}
 .description {
-    display: grid;
     text-align: center;
     gap: 1rem;
     height: 225px;
@@ -330,7 +295,6 @@ iframe {
     margin-bottom: 20px;
 }
 .end {
-    display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
 }
@@ -341,7 +305,6 @@ iframe {
 .location {
     color: var(--greyColor);
     font-size: .8rem;
-    display: flex;
     align-items: center;
 }
 .locationIcon {
@@ -353,12 +316,10 @@ iframe {
     margin-top: 3rem;
 }
 .footerFlex {
-    display: flex;
     justify-content: space-between;
     margin: 2rem 0px;
 }
 .left {
-    display: flex;
     gap: 1rem;
 }
 .footerOptions {

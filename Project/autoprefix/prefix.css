@@ -11,27 +11,17 @@
 }
 body {
     height: 100vh;
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: auto 1fr;
     grid-template-columns: auto 1fr;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     overflow-x: hidden;
-    overflow: hidden;
 }
 .layout {
     background-color: rgb(241, 237, 237);
-    display: -ms-grid;
-    display: grid;
     -ms-grid-rows: auto 1fr auto;
     grid-template-rows: auto 1fr auto;
     padding: 20px 40px;
     overflow-y: scroll;
-}
-main {
-    display: -ms-grid;
-    display: grid;
-    gap: 3rem;
 }
 .pointer:hover {
     cursor: pointer;
@@ -44,8 +34,22 @@ main {
 .backgroundRed {
     background-color: red;
 }
+.d-flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.d-grid{
+    display: -ms-grid;
+    display: grid;
+}
+.color-white{
+    color: white;
+}
+.bgColor-white{
+    background-color: white;
+}
 aside {
-    background-color: gray;
     padding: 30px;
     background-image: url(images/images-20240406T204644Z-001/images/sidebar-1.jpg);
     background-color: rgba(0, 0, 0, 0.815);
@@ -53,11 +57,7 @@ aside {
     overflow-y: scroll;
 }
 .title {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     gap: 2rem;
-    color: white;
     font-size: 1.5rem;
     margin-left: 10px;
 }
@@ -67,9 +67,6 @@ aside {
 .specificOption {
     border-radius: 3px;
     padding: 8px 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -77,12 +74,8 @@ aside {
         -ms-flex-align: center;
             align-items: center;
     gap: 4rem;
-    color: white;
 }
 .leftside {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -93,9 +86,6 @@ aside {
 }
 /*Header CSS*/
 .desktopHeader {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -105,25 +95,18 @@ aside {
     margin-bottom: 40px;
 }
 .dashboard {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     gap: 1rem;
 }
 .iconBackground {
-    background-color: white;
     padding: 5px;
     border-radius: 50%;
     -webkit-box-shadow: 3px 3px 3px rgb(216, 208, 208);
             box-shadow: 3px 3px 3px rgb(216, 208, 208);
 }
 .moreOptions {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     gap: 1.5rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -142,13 +125,10 @@ input:focus {
     -webkit-transition: .5s ease;
     -o-transition: .5s ease;
     transition: .5s ease;
-    -webkit-box-shadow: 5px 5px 10px rgb(136, 131, 131);
-            box-shadow: 5px 5px 10px rgb(136, 131, 131);
+    -webkit-box-shadow: 0px 0px 18px 0px rgb(136, 131, 131);
+            box-shadow: 0px 0px 18px 0px rgb(136, 131, 131);
 }
 .five {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -156,7 +136,6 @@ input:focus {
         -ms-flex-align: center;
             align-items: center;
     background-color: red;
-    color: white;
     border-radius: 50%;
     width: 10px;
     height: 10px;
@@ -171,7 +150,6 @@ input:focus {
 }
 .popUp {
     display: none;
-    background-color: white;
     border-radius: 3px;
     padding: 5px;
     position: absolute;
@@ -194,23 +172,21 @@ input:focus {
     display: none;
 }
 /*Main CSS*/
+main {
+    gap: 3rem;
+}
 .section1 {
     margin-top: 30px;
 }
 .satelliteImage {
-    background-color: white;
     border-radius: 5px;
     padding: 30px;
     -webkit-box-shadow: 5px 5px 5px rgb(199, 194, 194);
             box-shadow: 5px 5px 5px rgb(199, 194, 194);
-    display: -ms-grid;
-    display: grid;
     -ms-grid-rows: auto 1fr;
     grid-template-rows: auto 1fr;
 }
 .divide {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: auto 2rem 1fr;
     grid-template-columns: auto 1fr;
     gap: 2rem;
@@ -222,15 +198,9 @@ input:focus {
     width: 1rem;
 }
 .state {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     gap: 1rem;
 }
 .specificStates {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -238,9 +208,6 @@ input:focus {
     gap: 4rem;
 }
 .numbers {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     gap: 1rem;
 }
 iframe {
@@ -261,14 +228,11 @@ iframe {
             transform: translateY(-17px);
 }
 .section2 {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: 1fr 2rem 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
 .cart {
-    background-color: white;
     border-radius: 5px;
     padding: 15px;
     -webkit-box-shadow: 5px 5px 5px rgb(199, 194, 194);
@@ -279,9 +243,6 @@ iframe {
     grid-template-rows: 1fr auto;
 }
 .above {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -311,9 +272,6 @@ iframe {
             transform: translateY(-35px);
 }
 .cardText {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -332,9 +290,6 @@ iframe {
     width: 12px;
 }
 .tip {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -349,24 +304,10 @@ iframe {
 .tipText {
     font-size: .8rem;
 }
-.section3 {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-rows: auto 1fr;
-    grid-template-rows: auto 1fr;
-}
-.differentCards {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-}
 .firstImage {
     width: 50px;
 }
 .section3 {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-rows: auto 3rem 1fr;
     grid-template-rows: auto 1fr;
     gap: 3rem;
@@ -375,8 +316,6 @@ iframe {
     font-size: 2rem;
 }
 .cards {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: 1fr 2rem 1fr 2rem 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
@@ -384,7 +323,6 @@ iframe {
 .card {
     position: relative;
     padding: 10px;
-    background-color: white;
     -webkit-box-shadow: 5px 5px 5px rgb(199, 194, 194);
             box-shadow: 5px 5px 5px rgb(199, 194, 194);
     border-radius: 5px;
@@ -397,12 +335,6 @@ iframe {
 }
 .first {
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -423,22 +355,7 @@ iframe {
 .first:hover .smallIcons {
     display: block;
 }
-.splittingLine {
-    margin: 20px 0px;
-}
-.end2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    position: absolute;
-    bottom: -47px;
-}
 .description {
-    display: -ms-grid;
-    display: grid;
     text-align: center;
     gap: 1rem;
     height: 225px;
@@ -451,9 +368,6 @@ iframe {
     margin-bottom: 20px;
 }
 .end {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -466,9 +380,6 @@ iframe {
 .location {
     color: var(--greyColor);
     font-size: .8rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -482,18 +393,12 @@ iframe {
     margin-top: 3rem;
 }
 .footerFlex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin: 2rem 0px;
 }
 .left {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     gap: 1rem;
 }
 .footerOptions {
@@ -536,9 +441,6 @@ iframe {
     }
 }
 @media (max-width: 560px) {
-    .left {
-        gap: .5rem;
-    }
     .section2 {
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;

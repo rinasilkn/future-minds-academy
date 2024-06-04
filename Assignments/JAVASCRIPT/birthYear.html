@@ -7,10 +7,14 @@
 </head>
 <body>
     <script>
-        let userInput = prompt('Write your age');
-        let currentYear= 2024;
-        let birthYear = currentYear - ' ' - userInput;
-        alert('Your birth year is')
+        let age = prompt('Write your age');
+        
+        currentYear = 2024;
+       yearOfBirth = currentYear - age;
+
+        console.log(`You are ${age} so you were born in the year ${yearOfBirth}.`);
+        
+   
     </script>
 </body>
 </html>

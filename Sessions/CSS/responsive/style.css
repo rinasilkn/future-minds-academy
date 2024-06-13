@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    gap: 20px;
+}
+.container > div{
+    width: 300px;
+}
+.container img{
+  width: 300px;
+  height: 100px;
+ object-fit: cover;
+
+}
+
+@media (max-width: 1100px){
+    body{
+        background-color: blue;
+    }
+    .container >div{
+        width: 100%`````````;
+    }
+    .container  img{
+        height: 800px;
+        width: 100vh;
+        object-fit: cover;
+    }
+}

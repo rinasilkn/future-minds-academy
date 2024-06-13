@@ -1,0 +1,115 @@
+// the game itself
+var game;
+var productIDFromPrizes = {0:203171,2:203176,3:203178,4:204391,6:204395, 7:204398, 8:204401,9:204403,11:204405};
+
+var gameOptions = {
+     slices: 12,
+ 	slicePrizes: [
+        "Menu", //0
+        "Provoje Prap",
+        "Shkrepëse", //2
+        "Mozzarella Sticks - 5 copë",//3
+        "Një embëlsirë të vogël sipas dëshirës", //4
+        "Nuk keni fituar asgjë",
+		"Spicy Cheese Nuggets - 5 copë", //6
+		"1 pije", //7
+		"Heb's Lodra", //8
+		"Onion Rings - 5 copë", //9
+		"Nuk keni fituar asgjë", 
+		"Pomfrit Porcion" //11
+    ],
+     rotationTime: Phaser.Math.Between(2000, 3600)
+}
+ var gameConfig = {};
+
+	// once the window loads...
+		
+// PlayGame scene
+class playGame extends Phaser.Scene {
+
+     constructor() {
+        super("PlayGame");
+    }
+
+     preload() { // loading assets
+         this.load.image("wheel","https://delivery.hebskosova.com/images/HebsSpin.svg");
+        this.load.image("pin", "https://delivery.hebskosova.com/images/spinAndWin2.svg");
+    }
+
+     create() {
+          this.wheel = this.add.sprite(game.config.width / 2, game.config.height / 2, "wheel");
+         this.pin = this.add.sprite(game.config.width / 2, 50, "pin");
+         this.prizeText = this.add.text(game.config.width / 2, game.config.height - 35, "Luaj & Fito", {
+            font: "500 30px Saira",
+            align: "center",
+            color: "#060506",
+			fontSize: "18px"
+        });
+         this.prizeText.setOrigin(0.5);
+         this.canSpin = true;
+         this.input.on("pointerdown", this.spinWheel, this);
+    }
+
+     spinWheel() {
+
+         if (this.canSpin) {
+
+             this.prizeText.setText("");
+              var rounds = Phaser.Math.Between(4, 6);
+
+             var degrees = Phaser.Math.Between(5, 360);
+                var prize = gameOptions.slices  - 1 - Math.floor(degrees / (360 / gameOptions.slices));
+              this.canSpin = false;
+             this.tweens.add({
+                 targets: [this.wheel],
+                 angle: 360 * rounds + degrees+20,
+                 duration: gameOptions.rotationTime,
+                 ease: "Cubic.easeOut",
+                 callbackScope: this,
+                 onComplete: function (tween) {
+					if((prize!=1)&&(prize!=5)&&(prize!=10)){ 	
+						$('#prizeProductID').val(productIDFromPrizes[prize]).attr('title',gameOptions.slicePrizes[prize]);
+						this.prizeText.setText('Keni fituar: '+gameOptions.slicePrizes[prize]);
+					}
+					else{
+                     	this.prizeText.setText(gameOptions.slicePrizes[prize]);
+					}
+ 					
+  					if(prize==1){
+                    	this.canSpin = true;
+					}
+					else{
+						$('.continueAfterSpin').addClass('continueAfterSpinActive');
+						if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+							console.log('hey');
+						  $('.wheelerPopUp').animate({ scrollTop: $('.wheelerPopUp').height()+100 }, "fast");
+						}
+					}
+                }
+            });
+        }
+    }
+}
+
+// pure javascript to scale the game
+function resize() {
+    var canvas = document.querySelector(".wheelerPopUpIn canvas");
+    var windowWidth = $(".wheelerPopUp").width();
+     windowWidth = windowWidth - (windowWidth*0.05);
+    var windowHeight = $(".wheelerPopUp").height();
+     windowHeight = windowHeight - (windowHeight*0.05);
+    var windowRatio = windowWidth / windowHeight;
+    var gameRatio = game.config.width / game.config.height;
+     if (windowRatio < gameRatio) {
+         canvas.style.width = windowWidth + "px";
+        canvas.style.height = (windowWidth / gameRatio) + "px";
+		$('canvas').css('width',windowWidth + "px");
+		$('canvas').css('height',(windowWidth / gameRatio) + "px");
+    }
+    else {
+         canvas.style.width = (windowHeight * gameRatio) + "px";
+        canvas.style.height = windowHeight + "px";
+		$('canvas').css('width',(windowHeight * gameRatio) + "px");
+		$('canvas').css('height',windowHeight + "px");
+    }
+}

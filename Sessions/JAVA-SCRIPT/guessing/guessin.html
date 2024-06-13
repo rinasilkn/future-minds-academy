@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+</head>
+
+<body>
+
+    <h3 class="tries">Tries:3</h3>
+    <label for="">Guess a number between 1-10</label><br>
+    <input type="number" id="userNum"><br> <br>
+    <p class="hints"></p>
+    <button onclick="guessNumber()">Guess</button>
+    <hr>
+    <h3 class="msg"></h3>
+
+    <script>
+        let guessNum = Math.floor(Math.random() * 10) + 1;
+        console.log(guessNum);
+        const userNum = document.querySelector("#userNum");
+        const hints = document.querySelector(".hints");
+        const msg = document.querySelector(".msg");
+        const tries = document.querySelector(".tries");
+
+        var triesCount = 3;
+
+        let guessNumber = function () {
+            if (userNum.value < guessNum) {
+                hints.textContent = "Pleaase guess higher: ";
+            }
+            if (userNum.value > guessNum) {
+                hints.textContent = "Pleaase guess lower: ";
+            }
+
+            if (userNum.value == guessNum) {
+                msg.textContent = "Congratulations: ";
+                hints.textContent = "";
+            }
+
+            else {
+                if(triesCount == 1){
+                    msg.textContent = "You lost";
+                    hints.textContent = "";
+                }
+            }
+
+
+
+
+            triesCount--;
+            tries.textContent = "Tries: " + triesCount;
+        }
+
+
+
+        // let guessNum = Math.floor(Math.random() * 10)+1;
+        // console.log(guessNum);
+        // let userNum = prompt("Guess a number 1-10: ");
+
+        // if(userNum < guessNum){
+        //     userNum = prompt("Pleaase guess higher: ");
+        // }
+        // if(userNum > guessNum) {
+        //      userNum = prompt("Pleaase guess lower: ");
+        //     }
+
+        // if(userNum == guessNum){
+        //     console.log("Congratulations")
+        // }
+        // else{
+        //     console.log("You lost")
+        // }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ 
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>#</td>
+                <th>Title</td>
+            </tr>
+        </thead>
+        <tbody id="librat">
+        </tbody>
+    </table>
+ 
+    <script>
+        const libratData = document.querySelector("#librat");
+ 
+        let libraria = ["Book 1",
+            "Book 2", "Book 3",
+            "Book 4", "Book 5",
+            "Book 6", "Book 7"];
+ 
+        for(let i=0; i<libraria.length; i++) {
+            libratData.innerHTML += `
+            <tr>
+                <td>${i + 1}</td>
+                <td>${libraria[i]}</td>
+            </tr>
+            `;
+        }
+    </script>
+</body>
+ 
+</html>

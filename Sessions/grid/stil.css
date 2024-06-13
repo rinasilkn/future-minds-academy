@@ -1,0 +1,7 @@
+.s{
+    display: none;
+}
+.p:hover .s{
+    display: flex;
+    justify-content: center;
+}

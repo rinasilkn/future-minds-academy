@@ -1,0 +1,12 @@
+body{
+    font-family: sans-serif;
+}
+header{
+    height: 30vh;
+}
+.col {
+    background-color: antiquewhite;
+}
+.hero .features{
+    padding-top: 20px;
+}

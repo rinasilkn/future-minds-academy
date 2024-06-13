@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC</title>
+    <link rel="stylesheet" href="ac.css">
+</head>
+<body>
+    <div id="container">
+        <h3 id="temp">0</h3>
+        <figure id="photo">
+            <img src="download.jpg" width="500px" alt="">
+        </figure>
+        <select name="" id="tempSelect">
+          
+        </select>
+    </div>
+
+    <script>
+        const  tempSelect = document.querySelector("#tempSelect");
+
+        let alloptions= "";
+
+        for(let i=0; i<=30; i++){
+            if(i === 0){
+            alloptions +=`<option value"off">off</option>`;
+           }
+           else{
+            alloptions +=`<option value"${i}">${i}</option>`;
+           }
+           tempSelect.addEventListener('change', (event)=>{
+            const selectedTemp = event.target.value;
+            temp.textContent = selectedTemp;
+            console.log(`Selected temperature: ${selectedTemp}`);
+           });
+           
+        }
+        tempSelect.innerHTML = alloptions;
+    </script>
+  
+</body>
+</html>

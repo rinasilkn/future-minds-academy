@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+</head>
+
+<body>
+    <h1>Guessing game</h1>
+    <h3 id="guessMsg">Guess a number between 1 - 10: </h3>
+    <input type="text" id="userGuessNum"> <br>
+    <button onclick="guessMyNumber()">Guess</button>
+    <button id="restartBtn" onclick="restartGame()">Restart Game</button>
+
+    <script>
+        const guessMsg = document.querySelector('#guessMsg');
+        const userGuessNum = document.querySelector('#userGuessNum');
+        const restartBtn = document.querySelector('#restartBtn');
+        restartBtn.style.visibility = 'hidden';
+
+        const guessNumber = Math.floor(Math.random() * 10) + 1;
+        console.log("guessNumber: " + guessNumber);
+
+        let run = 1;
+
+        function guessMyNumber() {
+            let userGuess = parseInt(userGuessNum.value);
+            if (userGuess < guessNumber) {
+                if (run != 3) {
+                    guessMsg.textContent = 'Guess Higher: ';
+                }
+                else {
+                    guessMsg.textContent = 'You lost ';
+                    restartBtn.style.visibility = 'visible';
+                }
+            }
+            else if (userGuess > guessNumber) {
+                if (run != 3) {
+                    guessMsg.textContent = 'Guess Lower: ';
+                }
+                else {
+                    guessMsg.textContent = 'You lost ';
+                    userGuessNum.setAttribute("disabled", "disabled");
+                    restartBtn.style.visibility = 'visible';
+                }
+            }
+            else if (userGuess == guessNumber) {
+                guessMsg.textContent = 'Congratulations';
+                userGuessNum.setAttribute("disabled", "disabled");
+                restartBtn.style.visibility = 'visible';
+            }
+            else {
+                guessMsg.textContent = 'Game over';
+            }
+
+            run++;
+        }
+
+        function restartGame(){
+            window.location.reload();
+        }
+
+    </script>
+</body>
+
+</html>

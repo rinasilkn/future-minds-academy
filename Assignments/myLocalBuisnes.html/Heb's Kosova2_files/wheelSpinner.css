@@ -1,0 +1,159 @@
+.wheelerPopUp{
+position:fixed;
+display:none;
+    float: left;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+	height:calc(100% - 20vh);
+	background-color: #FFF;
+     overflow: hidden;
+	z-index: 99999;
+}
+ 
+.wheelerPopUpIn{
+position:relative;
+float:right;
+width:50%;
+height:100%;
+min-height:100%;
+}
+canvas {
+   /* display: block;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	z-index: 99999;*/
+	position:relative;
+	float:left;
+	z-index: 99999;
+/*	top: 50%;
+    transform: translate(0, -50%);*/
+}
+.continueAfterSpin{
+position:absolute;
+    right: 50%;
+    margin-right: -55px;
+	bottom:6px;
+     height: 40px;
+	 z-index: 999999;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+     line-height: 40px;
+    padding-left: 15px;
+    border-radius: 5px;
+    padding-right: 15px;
+    background-color: #d3b213;
+    color: #FFF;
+    cursor: pointer;
+    letter-spacing: 1.2px;
+    -webkit-box-shadow: rgb(0 0 0 / 30%) 0 1px 3px;
+    -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+    box-shadow: rgb(0 0 0 / 40%) 0 3px 3px;
+	display:none;
+}
+.continueAfterSpinActive{
+display:block;
+}
+.playToWinBtn{
+position:relative;
+ z-index: 999999;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+      line-height: 40px;
+	 padding:10px;
+    padding-left: 15px;
+    border-radius: 5px;
+    padding-right: 15px;
+    background-color: #d3b213;
+    color: #FFF;
+    cursor: pointer;
+    letter-spacing: 1.2px;
+    -webkit-box-shadow: rgb(0 0 0 / 30%) 0 1px 3px;
+    -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+    box-shadow: rgb(0 0 0 / 40%) 0 3px 3px;
+}
+.wheelerPopUpLeft{
+position:relative;
+float:left;
+width:45%;
+margin:5%;
+margin-right:0;
+height:86%;
+background-position:center;
+background-size:contain;
+background-repeat:no-repeat;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-ms-flex-direction: column;
+flex-direction: column;
+-webkit-box-align: start;
+-ms-flex-align: start;
+align-items: start;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+justify-content: center;
+display:flex;
+
+}
+.wheelerPopUpLeft img{
+position:relative;
+float:left;
+height:100%;
+
+}
+
+
+@media (max-width:481px) {
+.wheelerPopUpLeft{
+    width: 90%;
+	display: block;
+    height: auto;
+}
+.wheelerPopUpLeft img{
+width:100%;
+height:auto;
+}
+.wheelerPopUp{
+height:100%;
+    width: 100%;
+    height: 100%;
+	left:0;
+	margin:0;
+     overflow: auto;  	
+}
+.wheelerPopUpIn{
+height:auto;
+min-height:auto;
+}
+.continueAfterSpin, .wheelerPopUpIn{
+width:100%;
+}
+canvas{
+left:50%;
+transform: translate(-50%, 0);
+}
+.wheelerPopUpIn{
+    margin-bottom: 40px;
+}
+.continueAfterSpin {
+left: unset;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    float: left;
+    bottom: unset;
+    right: unset;
+    margin-right: unset;
+    margin-bottom: 80px;
+}
+
+}

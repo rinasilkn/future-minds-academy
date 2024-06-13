@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAlculator</title>
+</head>
+
+<body>
+
+    <head>
+        <title>HTML Calculator</title>
+
+        <!-- For styling -->
+        <style>
+            table {
+                border: 1px solid black;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            input[type="button"] {
+                width: 100%;
+                padding: 20px 40px;
+                background-color: green;
+                color: white;
+                font-size: 24px;
+                font-weight: bold;
+                border: none;
+                border-radius: 5px;
+            }
+
+            input[type="text"] {
+                padding: 20px 30px;
+                font-size: 24px;
+                font-weight: bold;
+                border: none;
+                border-radius: 5px;
+                border: 2px solid black;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Create table -->
+        <table id="calcu">
+            <tr>
+                <td colspan="3">
+                    <input type="text" disabled id="calcField">
+                </td>
+                <td><input type="button" value="c" onclick="clearAll();" id="clearBtn"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" onclick="sendValue(this.value)" value="1" id="oneBtn"></td>
+                <td><input type="button" onclick="sendValue(this.value)" value="2" id="twobtn"></td>
+                <td><input type="button" onclick="sendValue(this.value)" value="3" id="threeBtn"></td>
+                <td><input type="button" onclick="sendValue(this.value)" value="/" id="divideBtn"></td>
+            </tr>
+            <tr>
+                <td><input type="button" onclick="sendValue(this.value)" value="4" id="fourBtn"></td>
+                <td><input type="button" onclick="sendValue(this.value)" value="5" id="fiveBtn"></td>
+                <td><input type="button" onclick="sendValue(this.value)" value="6" id="sixBtn"></td>
+                <td><input type="button" onclick="sendValue(this.value)" value="*" id="addBtn"></td>
+            </tr>
+            <tr>
+                <td><input type="button" onclick="sendValue(this.value)" value="7" id="sevenBtn"></td>
+                <td><input type="button" onclick="sendValue(this.value)" value="8" id="eigthBtn"></td>
+                <td><input type="button" onclick="sendValue(this.value)" value="9" id="nineBtn"></td>
+                <td><input type="button" onclick="sendValue(this.value)" value="-" id="divideBtn"></td>
+            </tr>
+            <tr>
+                <td><input type="button" onclick="sendValue(this.value)" value="0" id="zeroBtn"></td>
+                <td><input type="button" onclick="equate();" value="=" id="equalBtn"></td>
+                <td><input type="button" onclick="sendValue(this.value)" value="+" id="addBtn"></td>
+            </tr>
+        </table>
+
+        <script>
+            const calcField = document.querySelector("#calcField");
+            
+
+            function sendValue(r) {
+                calcField.value += r;
+            }
+            function clearAll(){
+                calcField.value = "";
+            }
+            function equate(){
+                calcField.value = eval(calcField.value);
+            }           
+        </script>
+
+
+    </body>
+
+</html>

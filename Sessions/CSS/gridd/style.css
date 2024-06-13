@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.first1{ grid-area: header; height: 10vh;}
+.first2{grid-area:  menu;}
+.first3{grid-area: main; height: 80vh;}
+.first4{ grid-area: right;}
+.first5{grid-area: footer; height: 10vh;}
+
+
+.gridc{
+    display: grid;
+    grid-template-areas: 'header header header header header header'
+                         'menu   main   main   main   right  right'
+                         'menu   footer footer footer footer footer' 
+    ;
+
+
+}
+.gridc > div{
+    background-color: aqua;
+    text-align: center;
+    font-size: 39px;
+    border: 1px solid red;
+}
